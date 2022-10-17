@@ -1,0 +1,171 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "inspectseq_metadata_warning_draft5",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_gte_date",
+      "kwargs": {
+        "column": "sample_collection_datetime",
+        "min_value": "2019-06-01 00:00:00"
+      },
+      "meta": {
+        "notes": {
+          "content": "All sample_collection_datetime values must be greater than or equal to June 1, 2019",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_lte_date",
+      "kwargs": {
+        "column": "sample_collection_datetime",
+        "max_value": {
+          "$PARAMETER": "now()"
+        }
+      },
+      "meta": {
+        "notes": {
+          "content": "All sample_collection_datetime values must be less than or equal to today's date",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_parse_into_expected_locations",
+      "kwargs": {
+        "allowed_locations_abs_fp": "/Users/abirmingham/Work/Repositories/cview-utils/great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml",
+        "column": "sample_collection_location",
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": "All sample_collection_location values must be one of the allowed locations",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "specimen_type",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "BAL",
+          "Culture",
+          "Mid-Turbinate swab",
+          "Sputum swab",
+          "Swab",
+          "air",
+          "bronchial_wash",
+          "control",
+          "nasal_swab",
+          "nasopharyngeal",
+          "nasopharyngeal_swab",
+          "oropharynx_swab",
+          "tracheal aspirate",
+          "viral_culture",
+          "viral_isolate",
+          "wastewater"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All specimen_type values must be one of a pre-defined list",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "subject_age",
+        "max_value": 95.0,
+        "min_value": 1.0
+      },
+      "meta": {
+        "notes": {
+          "content": "subject_age values should probably be greater than or equal to one and less than or equal to 95",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex_list",
+      "kwargs": {
+        "column": "zip",
+        "match_on": "any",
+        "regex_list": [
+          "^\\d{5}$",
+          "^\\d{5}-\\d{4}$"
+        ],
+        "result_format": {
+          "include_unexpected_rows": true,
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "notes": {
+          "content": [
+            "All zip values must be of the form `##### or #####-####",
+            "Examples: `92023`",
+            "`92093-0021`"
+          ],
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_match_regex_list",
+      "kwargs": {
+        "column": "zip",
+        "regex_list": [
+          "^19361",
+          "^22173",
+          "^22190",
+          "^22400",
+          "^22414",
+          "^22440",
+          "^22506",
+          "^22510",
+          "^44200",
+          "^59757",
+          "^91241",
+          "^91919",
+          "^92016",
+          "^92157",
+          "^92713",
+          "^00000"
+        ],
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": [
+            "No zip values may match a known invalid zip code",
+            "Examples: `19361`",
+            "`91919-9000`"
+          ],
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "state_code",
+        "condition_parser": "pandas",
+        "row_condition": "(zip!='0') & (zip.notna())"
+      },
+      "meta": {
+        "notes": {
+          "content": "State codes for non-null, non-zero zip values should probably not be null",
+          "format": "markdown"
+        }
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.14.8"
+  }
+}

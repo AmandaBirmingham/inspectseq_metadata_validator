@@ -1,0 +1,334 @@
+North America:
+  Mexico:
+    Tijuana: {}
+  USA:
+    Alabama:
+      Elmore: {}
+      Jefferson: {}
+      Madison: {}
+      Montgomery: {}
+    Alaska:
+      Anchorage Municipality: {}
+      North Slope Borough: {}
+    Arizona:
+      Maricopa: {}
+      Mohave: {}
+      Pima: {}
+      Yuma: {}
+    Arkansas:
+      Boone: {}
+      Craighead: {}
+      Pulaski: {}
+      Washington: {}
+    California:
+      Alameda: {}
+      City and County of San Francisco: {}
+      Contra Costa: {}
+      El Dorado: {}
+      Fresno: {}
+      Glenn: {}
+      Humboldt: {}
+      Imperial: {}
+      Inyo: {}
+      Kern: {}
+      Kings: {}
+      Lake: {}
+      Los Angeles: {}
+      Marin: {}
+      Merced: {}
+      Monterey: {}
+      Napa: {}
+      Nevada: {}
+      Orange: {}
+      Placer: {}
+      Riverside: {}
+      Sacramento: {}
+      San Benito: {}
+      San Bernardino: {}
+      San Diego: {}
+      San Joaquin: {}
+      San Luis Obispo: {}
+      San Mateo: {}
+      Santa Barbara: {}
+      Santa Clara: {}
+      Santa Cruz: {}
+      Shasta: {}
+      Solano: {}
+      Sonoma: {}
+      Stanislaus: {}
+      Sutter: {}
+      Tulare: {}
+      Tuolumne: {}
+      Ventura: {}
+      Yolo: {}
+    Colorado:
+      Arapahoe: {}
+      Boulder: {}
+      Denver: {}
+      Douglas: {}
+      El Paso: {}
+      Larimer: {}
+      Weld: {}
+    Connecticut:
+      Fairfield: {}
+      Hartford: {}
+      Litchfield: {}
+      Middlesex: {}
+      New Haven: {}
+    Delaware:
+      Kent: {}
+      New Castle: {}
+    District of Columbia:
+      District of Columbia: {}
+    Florida:
+      Bay: {}
+      Brevard: {}
+      Broward: {}
+      Citrus: {}
+      Clay: {}
+      Collier: {}
+      DeSoto: {}
+      Flagler: {}
+      Hardee: {}
+      Highlands: {}
+      Hillsborough: {}
+      Lake: {}
+      Marion: {}
+      Miami-Dade: {}
+      Monroe: {}
+      Orange: {}
+      Osceola: {}
+      Palm Beach: {}
+      Pasco: {}
+      Pinellas: {}
+      Polk: {}
+      Putnam: {}
+      Saint Johns: {}
+      Sarasota: {}
+      Seminole: {}
+      Sumter: {}
+      Volusia: {}
+    Georgia:
+      Cobb: {}
+      DeKalb: {}
+      Fulton: {}
+    Hawaii:
+      Hawaii: {}
+      Honolulu: {}
+      Maui: {}
+    Idaho:
+      Ada: {}
+      Bonner: {}
+    Illinois:
+      Carroll: {}
+      Champaign: {}
+      Cook: {}
+      DuPage: {}
+      Lake: {}
+      Rock Island: {}
+      Vermilion: {}
+      Will: {}
+    Indiana:
+      Bartholomew: {}
+      Johnson: {}
+      Lake: {}
+      Marion: {}
+    Iowa:
+      Black Hawk: {}
+      Johnson: {}
+      Lee: {}
+    Kansas:
+      Johnson: {}
+      Sedgwick: {}
+      Wyandotte: {}
+    Kentucky:
+      Jefferson: {}
+      Marshall: {}
+    Louisiana:
+      Orleans: {}
+    Maine:
+      Hancock: {}
+      Kennebec: {}
+      Sagadahoc: {}
+      York: {}
+    Maryland:
+      Anne Arundel: {}
+      Baltimore: {}
+      Baltimore (city): {}
+      Frederick: {}
+      Howard: {}
+      Montgomery: {}
+      Prince George's: {}
+    Massachusetts:
+      Barnstable: {}
+      Bristol: {}
+      Dukes: {}
+      Essex: {}
+      Franklin: {}
+      Middlesex: {}
+      Norfolk: {}
+      Plymouth: {}
+    Michigan:
+      Charlevoix: {}
+      Genesee: {}
+      Kalamazoo: {}
+      Lapeer: {}
+      Montcalm: {}
+      Oakland: {}
+      Ottawa: {}
+      Sanilac: {}
+      Washtenaw: {}
+      Wayne: {}
+    Minnesota:
+      Anoka: {}
+      Dakota: {}
+      Hennepin: {}
+      Hubbard: {}
+      Ramsey: {}
+      Washington: {}
+    Missouri:
+      Cole: {}
+      Jackson: {}
+      Platte: {}
+      St. Louis: {}
+      Webster: {}
+    Nebraska:
+      Douglas: {}
+      Sarpy: {}
+    Nevada:
+      Clark: {}
+      Douglas: {}
+      Lincoln: {}
+      Nye: {}
+      Washoe: {}
+    New Hampshire:
+      Grafton: {}
+      Hillsborough: {}
+      Strafford: {}
+    New Jersey:
+      Bergen: {}
+      Burlington: {}
+      Hudson: {}
+      Mercer: {}
+      Monmouth: {}
+      Morris: {}
+      Ocean: {}
+      Somerset: {}
+      Union: {}
+    New Mexico:
+      "Do\xF1a Ana": {}
+      Taos: {}
+    New York:
+      Bronx: {}
+      Dutchess: {}
+      Erie: {}
+      Essex: {}
+      Kings: {}
+      Monroe: {}
+      Nassau: {}
+      New York: {}
+      Onondaga: {}
+      Orange: {}
+      Queens: {}
+      Rensselaer: {}
+      Richmond: {}
+      Ulster: {}
+      Warren: {}
+      Westchester: {}
+    North Carolina:
+      Durham: {}
+      Mecklenburg: {}
+      Pitt: {}
+      Wake: {}
+      Watauga: {}
+    Ohio:
+      Butler: {}
+      Clark: {}
+      Cuyahoga: {}
+      Franklin: {}
+      Hamilton: {}
+      Hocking: {}
+      Mahoning: {}
+      Montgomery: {}
+    Oklahoma:
+      Le Flore: {}
+      Tulsa: {}
+    Oregon:
+      Baker: {}
+      Benton: {}
+      Clackamas: {}
+      Klamath: {}
+      Lane: {}
+      Marion: {}
+      Multnomah: {}
+      Washington: {}
+    Pennsylvania:
+      Allegheny: {}
+      Butler: {}
+      Delaware: {}
+      Erie: {}
+      Lehigh: {}
+      Monroe: {}
+      Montgomery: {}
+      Philadelphia: {}
+    Rhode Island:
+      Providence: {}
+    South Carolina:
+      Barnwell: {}
+      Berkeley: {}
+      Charleston: {}
+      Oconee: {}
+      Richland: {}
+      Spartanburg: {}
+    Tennessee:
+      Blount: {}
+      Cheatham: {}
+      Grainger: {}
+      Knox: {}
+      Shelby: {}
+      Sumner: {}
+    Texas:
+      Bell: {}
+      Bexar: {}
+      Collin: {}
+      Comal: {}
+      Dallas: {}
+      Denton: {}
+      El Paso: {}
+      Fort Bend: {}
+      Harris: {}
+      Karnes: {}
+      Montgomery: {}
+      Tarrant: {}
+      Travis: {}
+    Utah:
+      Salt Lake: {}
+      Utah: {}
+      Weber: {}
+    Vermont:
+      Washington: {}
+    Virginia:
+      Arlington: {}
+      Chesapeake (city): {}
+      City of Richmond: {}
+      Fairfax: {}
+      Loudoun: {}
+      Northumberland: {}
+      Virginia Beach (city): {}
+    Washington:
+      Clark: {}
+      King: {}
+      Kitsap: {}
+      Lewis: {}
+      Snohomish: {}
+      Spokane: {}
+      Thurston: {}
+      Whatcom: {}
+      Yakima: {}
+    Wisconsin:
+      Bayfield: {}
+      Calumet: {}
+      Dane: {}
+      Sheboygan: {}
+      Trempealeau: {}
+      Waukesha: {}

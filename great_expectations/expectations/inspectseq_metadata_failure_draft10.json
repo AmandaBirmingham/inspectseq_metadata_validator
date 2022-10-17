@@ -1,0 +1,435 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "inspectseq_metadata_failure_draft10",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_set",
+      "kwargs": {
+        "column_set": [
+          "search_id",
+          "source",
+          "sample_collection_datetime",
+          "sample_collection_location",
+          "specimen_type",
+          "subject_species",
+          "subject_gender",
+          "subject_age",
+          "zip",
+          "submit_to_gisaid",
+          "state_code"
+        ],
+        "exact_match": false,
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": "Expected columns must be present (in any order).  Additional columns are tolerated.",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_table_columns_not_unnamed",
+      "kwargs": {
+        "exception_num": 1
+      },
+      "meta": {
+        "notes": {
+          "content": "There must not be more than one unnamed column",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "search_id",
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": "No search ids may be null",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_are_unique",
+      "kwargs": {
+        "column": "search_id"
+      },
+      "meta": {
+        "notes": {
+          "content": "All search ids must be unique",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex_list",
+      "kwargs": {
+        "column": "search_id",
+        "match_on": "any",
+        "regex_list": [
+          "^SEARCH-\\d{5}$",
+          "^SEARCH-\\d{6}$"
+        ],
+        "result_format": {
+          "include_unexpected_rows": true,
+          "result_format": "COMPLETE"
+        }
+      },
+      "meta": {
+        "notes": {
+          "content": "All search ids must be of the form `SEARCH-#####`",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "search_id",
+        "result_format": "COMPLETE",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All search ids must be character or string types",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "source",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "Air_Sample",
+          "CALM",
+          "CDPH",
+          "Coalition of Independent Schools",
+          "Control Sample",
+          "Excite Lab",
+          "HELIX",
+          "Mixture",
+          "PL_SD_County",
+          "RTL",
+          "Repeats",
+          "SANDBANK",
+          "SASEA",
+          "SDSU",
+          "SDSU-County",
+          "SD_Point_Loma",
+          "SFO_WW",
+          "SYHC",
+          "San Diego Fire-Rescue Department",
+          "Scripps-Sequencing",
+          "SeqCntrls",
+          "SyntheticMix",
+          "UCSD_BSL3",
+          "UCLA_WW"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All source values must be one of a pre-defined list",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "source",
+        "result_format": "COMPLETE",
+        "type_list": [
+          "CHAR",
+          "NCHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "NTEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str",
+          "object",
+          "dtype('O')"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All source must be character or string types (or null)",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "sample_collection_datetime",
+        "regex": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:[0-9.]+\\+\\d{2}:\\d{2}$",
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": [
+            "All sample_collection_datetime values must be of the form `####-##-## ##:##:[combination of # and .]+##:##`",
+            "Examples: `2021-01-22 00:00:00+00:00`",
+            "`2021-01-14 14:07:46.878991+00:00`"
+          ],
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "specimen_type",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "BAL",
+          "Culture",
+          "Mid-Turbinate swab",
+          "Sputum swab",
+          "Swab",
+          "air",
+          "bronchial_wash",
+          "control",
+          "nasal_swab",
+          "nasopharyngeal",
+          "nasopharyngeal_swab",
+          "oropharynx_swab",
+          "tracheal aspirate",
+          "viral_culture",
+          "viral_isolate",
+          "unknown",
+          "wastewater"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All specimen_type values must be one of a pre-defined list",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "subject_species",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "Human"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All subject_species values must be one of a pre-defined list",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "subject_gender",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "Female",
+          "Male",
+          "Unknown"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All subject_gender values must be one of a pre-defined list",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "subject_age",
+        "max_value": 1000.0,
+        "min_value": 0.0
+      },
+      "meta": {
+        "notes": {
+          "content": "All subject_age values must be greater than or equal to zero and less than or equal to 1000",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "subject_age",
+        "result_format": "COMPLETE",
+        "type_list": [
+          "FLOAT",
+          "FLOAT4",
+          "FLOAT8",
+          "FLOAT64",
+          "DOUBLE",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL",
+          "REAL"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All subject_age values must be numeric floating-point types (or null)",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "submit_to_gisaid",
+        "result_format": "COMPLETE"
+      },
+      "meta": {
+        "notes": {
+          "content": "No submit_to_gisaid values may be null",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "submit_to_gisaid",
+        "result_format": "COMPLETE",
+        "value_set": [
+          false,
+          true
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All submit_to_gisaid values must be either True or False",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "submit_to_gisaid",
+        "result_format": "COMPLETE",
+        "type_list": [
+          "BOOLEAN",
+          "boolean",
+          "BOOL",
+          "TINYINT",
+          "BIT",
+          "bool",
+          "BooleanType"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All submit_to_gisaid values must be boolean or boolean-like types",
+          "format": "markdown"
+        }
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "state_code",
+        "result_format": "COMPLETE",
+        "value_set": [
+          "AL",
+          "AK",
+          "AZ",
+          "AR",
+          "CA",
+          "CO",
+          "CT",
+          "DE",
+          "DC",
+          "FL",
+          "GA",
+          "HI",
+          "ID",
+          "IL",
+          "IN",
+          "IA",
+          "KS",
+          "KY",
+          "LA",
+          "ME",
+          "MD",
+          "MA",
+          "MI",
+          "MN",
+          "MS",
+          "MO",
+          "MT",
+          "NE",
+          "NV",
+          "NH",
+          "NJ",
+          "NM",
+          "NY",
+          "NC",
+          "ND",
+          "OH",
+          "OK",
+          "OR",
+          "PA",
+          "RI",
+          "SC",
+          "SD",
+          "TN",
+          "TX",
+          "UT",
+          "VT",
+          "VA",
+          "WA",
+          "WV",
+          "WI",
+          "WY"
+        ]
+      },
+      "meta": {
+        "notes": {
+          "content": "All state_code values must be a valid US state postal (2-letter) abbreviation",
+          "format": "markdown"
+        }
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.14.8"
+  }
+}

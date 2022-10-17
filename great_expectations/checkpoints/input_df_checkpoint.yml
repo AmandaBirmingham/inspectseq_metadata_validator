@@ -1,0 +1,33 @@
+name: input_df_checkpoint
+config_version: 1.0
+template_name:
+module_name: great_expectations.checkpoint
+class_name: Checkpoint
+run_name_template:
+expectation_suite_name:
+batch_request: {}
+action_list:
+  - name: store_validation_result
+    action:
+      class_name: StoreValidationResultAction
+  - name: store_evaluation_params
+    action:
+      class_name: StoreEvaluationParametersAction
+  - name: update_data_docs
+    action:
+      class_name: UpdateDataDocsAction
+      site_names: []
+evaluation_parameters: {}
+runtime_configuration:
+  result_format:
+    result_format: COMPLETE
+    include_unexpected_rows: true
+validations:
+  - batch_request:
+      datasource_name: inspectseq_metadata
+      data_connector_name: default_runtime_data_connector_name
+      data_asset_name: all_samples_search_ids_20221006_not_known_bad_2022-10-17_10-51-37
+    expectation_suite_name: inspectseq_metadata_warning_draft5
+profilers: []
+ge_cloud_id:
+expectation_suite_ge_cloud_id:
