@@ -19,7 +19,7 @@ def collect_unique_locations(test_metadata):
             raise ValueError(f"Location is longer than expected: {i}")
 
         curr_dict = known_values
-        piece_0 = piece_1 = piece_2 = piece_3 = None
+        piece_0 = piece_1 = piece_2 = None
         for piece_index in range(len(pieces)):
             curr_piece = pieces[piece_index]
             if curr_piece:
@@ -54,20 +54,24 @@ def generate_unique_locations_yaml(input_fp, output_fp):
     known_values = collect_unique_locations(test_metadata)
 
     with open(output_fp, 'w') as yamlfile:
-        data = yaml.dump(known_values, yamlfile)
+        yaml.dump(known_values, yamlfile)
         print("Locations yaml write successful")
 
 
-if __name__ == '__main__':
-    # example usage:
-    # python capture_locations_from_metadata_csv.py \
-    #   /Users/abirmingham/Desktop/covid_temp/all_samples_search_ids_20220419.csv \
-    #   /Users/abirmingham/Desktop/expect_column_values_to_parse_into_expected_locations_config.yaml
-
-    # result, after verification, should be used to replace:
-    #   /Users/abirmingham/Work/Repositories/cview-utils/great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml
-
+def main():
     input_fp = argv[1]
     output_fp = argv[2]
 
     generate_unique_locations_yaml(input_fp, output_fp)
+
+
+if __name__ == '__main__':
+    # example usage:
+    # capture_metadata_locations \
+    #   /Users/abirmingham/Desktop/covid_temp/all_samples_search_ids_20220419.csv \
+    #   /Users/abirmingham/Desktop/covid_temp/metadata/temp_locations.yaml
+
+    # result, after verification, should be used to replace:
+    #   inspectseq_metadata_validator/great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml
+
+    main()

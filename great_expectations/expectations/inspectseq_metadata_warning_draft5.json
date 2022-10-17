@@ -33,7 +33,7 @@
     {
       "expectation_type": "expect_column_values_to_parse_into_expected_locations",
       "kwargs": {
-        "allowed_locations_abs_fp": "/Users/abirmingham/Work/Repositories/cview-utils/great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml",
+        "allowed_locations_abs_fp": "/absolute/path/to/local/inspectseq_metadata_validator/great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml",
         "column": "sample_collection_location",
         "result_format": "COMPLETE"
       },
