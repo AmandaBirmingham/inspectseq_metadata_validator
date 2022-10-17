@@ -11,15 +11,15 @@ built on the [Great Expectations](https://greatexpectations.io/) software packag
 
 ## Validator Reports
 
+On each run, the validator produces a minimum of two reports:
+   * The `*_validation_report_*.csv` contains a report of failures and warnings for ALL records in the metadata file  
+   * The `*_validation_report_not_known_bad_*.csv` contains a report of failures and warnings for records in the metadata file that do not already have their `metadata_cleared` field set to False
+
 Report names are prefixed with the name of the metadata file that was validated, 
 and suffixed with the timestamp on which they were run, with the report type 
 specified in between (for example, the report named 
 `all_samples_search_ids_20221006_validation_differential_report_2022-10-17_10-26-47` 
-was run on metadata file `all_samples_search_ids_20221006.csv` on 2022-10-17 at 10:26:47). 
-
-On each run, the validator produces a minimum of two reports:
-   * The `*_validation_report_*.csv` contains a report of failures and warnings for ALL records in the metadata file  
-   * The `*_validation_report_not_known_bad_*.csv` contains a report of failures and warnings for records in the metadata file that do not already have their `metadata_cleared` field set to False
+was run on metadata file `all_samples_search_ids_20221006.csv` on 2022-10-17 at 10:26:47).
 
 Often it is useful to see what new validation issues have emerged since the last 
 metadata file was produced.  If the new metadata file is placed in the same directory
