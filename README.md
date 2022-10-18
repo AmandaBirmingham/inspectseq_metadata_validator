@@ -3,7 +3,7 @@
 ## Introduction
 
 The purpose of this validator is to examine an InspectSeq metadata csv
-file created for input to the [C-VIEW pipeline](https://github.com/ucsd-ccbb/C-VIEW) 
+file created for input to the [C-VIEW] (https://github.com/ucsd-ccbb/C-VIEW) pipeline 
 and generate a report on whether it contains any known metadata flaws. It reports both validation failures (known unacceptable metadata values) as well
 as validation warnings (metadata values that *often but not always* represent a
 metadata flaw and require human examination to disambiguate). The validator is
