@@ -112,7 +112,9 @@ datasources:
    2. If it is desirable to run differential reports between this and a previous metadata version, ensure that the new metadata file is placed in the same directory as the previous reports!
 2. At the command line, activate the validator's conda environment:
 
-`conda activate inspectseq_metadata_validator`
+```
+conda activate inspectseq_metadata_validator
+```
 
 3. Capture the locations used in the new metadata file into a temporary yaml file
    1. In the below command, replace `/path/to/all_samples_search_ids_<latest>.csv` with the path to the metadata file downloaded in step 1
@@ -145,10 +147,7 @@ opendiff great_expectations/plugins/expectations/expect_column_values_to_parse_i
 cd inspectseq_metadata_validator  # if not already there 
 ```
 ```
-cp temp_locations.yaml 
-```
-```
-great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml 
+cp temp_locations.yaml great_expectations/plugins/expectations/expect_column_values_to_parse_into_expected_locations_config.yaml 
 ```
 
 6. Generate the metadata validation reports, which will be placed in the same directory as the input metadata file 
